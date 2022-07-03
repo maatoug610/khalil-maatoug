@@ -1,0 +1,103 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: white;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      @include mobile{
+        position: relative;
+        left: 50%;
+      }
+      
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      
+
+      input {
+        width: 400px;
+        max-width: 400px;
+        height: 30px;
+        font-size: 14px;
+        font-family: sans-serif;
+        
+        @include mobile {
+          width: 200px;
+          height: 20px;
+        }
+      }
+
+      textarea {
+        width: 400px;
+        max-width: 400px;
+        height: 200px;
+        max-height: 200px;
+        font-size: 14px;
+        font-family: sans-serif;
+
+        @include mobile {
+          width: 200px;
+          max-width: 200px;
+          height: 100px;
+          max-height: 100px;
+        }
+      }
+
+      button {
+        
+        width: 150px;
+        height: 50px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 20px;
+        cursor: pointer;
+        @include mobile{
+          height: 20px;
+          font-size: 10px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        color: green;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-transform: uppercase;
+        outline: 1px solid black;
+        padding: 2px 2px;
+      }
+    }
+  }
+}

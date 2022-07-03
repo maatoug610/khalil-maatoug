@@ -1,0 +1,14 @@
+// $mainColor: #15023a; 
+// $mainColor: #ec1616;
+// $mainColor : #008F7A;
+$mainColor: #005289;
+
+
+//Mobile parametrs
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
